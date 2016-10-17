@@ -64,6 +64,9 @@ default_config = dict(
     CHILD_DAO_LIST=map(utils.normalize_address, child_dao_list),
     DAO_WITHDRAWER=utils.normalize_address('0xbf4ed7b27f1d666546e30d74d50d173d20bca754'),
 )
+
+LATEST_APPLIED_FORK_BLKNUM = default_config.get('DAO_FORK_BLKNUM')
+
 assert default_config['NEPHEW_REWARD'] == \
     default_config['BLOCK_REWARD'] // 32
 
